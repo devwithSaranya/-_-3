@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e90ff, #00bfff); /* Default blue gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    transition: background 1.5s ease-in-out;
+}
+
+.converter {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+.converter h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.converter p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #0047ff;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap; /* Allow items to wrap when necessary */
+}
+
+.input-group input, .input-group select {
+    flex: 1 1 45%; /* Each element takes up 45% of the width */
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px; /* Add margin for vertical spacing on small screens */
+}
+
+.input-group select {
+    margin-right: 0; /* Remove right margin for the select dropdown */
+}
+
+.converter button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(90deg, #1a1aff, #0047ff);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.converter button:hover {
+    background: linear-gradient(90deg, #0047ff, #1a75ff);
+    transform: scale(1.05);
+}
+
+.result {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+    .converter {
+        width: 300px;
+        padding: 20px;
+    }
+
+    .input-group {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .input-group input, .input-group select {
+        width: 100%; /* Ensure inputs and selects take full width */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    .result {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .converter {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .converter h1 {
+        font-size: 1.4rem;
+    }
+
+    .result {
+        font-size: 1.1rem;
+    }
+
+    .converter button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}

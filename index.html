@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis Infobyte Level 1 task 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="converter" id="converter">
+        <h1>Temperature Converter</h1>
+        <p class="result" id="result">Result</p>
+        <div class="input-group">
+            <input type="number" id="degrees" placeholder="Enter Degrees" oninput="updateBackground()" />
+            <select id="fromType">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+            <span>to</span>
+            <select id="toType">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+        </div>
+        <button onclick="convertTemperature()">CONVERT</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
